@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+.menu {
+    background-color: #817979;
+    overflow: hidden;
+    user-select: none;
+}
+.menu a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.5s, color 0.5s;
+}
+.menu a:hover {
+    background-color: #ddd;
+    color: #817979;
+}
+.section{
+    padding: 50px;
+    margin-top: 30px;
+    background-color: #f1f1f1;
+}
+.link{
+    text-align: center;
+    color: #817979;
+    overflow: hidden;
+    user-select: none;
+    text-decoration: none;
+}
+.link:hover{
+    background-color: #ddd;
+}
+/*main css */
+.main {
+    display: flex; /* 使用 flexbox 使得內容在同一行中排列 */
+    flex-wrap: wrap; /* 讓內容在空間不夠時換行 */
+}
+/*介紹裝飾*/
+.introduce h2{
+    text-align: center;
+}
+blockquote {
+    background-color: #f9f9f9; /* 設置背景顏色 */
+    border-left: 5px solid #ccc; /* 設置左邊框 */
+    margin: 20px 0; /* 設置外邊距 */
+    padding: 10px; /* 設置內邊距 */
+}
+
+blockquote p {
+    font-size: 16px; /* 設置文字大小 */
+    line-height: 1.5; /* 設置行高 */
+    color: #333; /* 設置文字顏色 */
+}
+
+.food-box {
+    width: calc(25% - 20px); /* 設置框框的寬度，這裡假設每行放兩個框框 */
+    margin: 10px; /* 設置框框之間的間距 */
+    float: left; /* 使用 float 使得框框並排 */
+    border: 1px solid #ccc; /* 設置框框邊框 */
+    border-radius: 8px; /* 設置框框邊角的圓角 */
+    padding: 20px; /* 設置內邊距 */
+    background-color: #f9f9f9; /* 設置背景顏色 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+}
+
+.food-box h2 {
+    font-size: 1.5em; /* 設置標題文字大小 */
+    margin-bottom: 10px; /* 設置標題底部間距 */
+}
+
+.food-box img {
+    width: 100%; /* 讓圖片自適應寬度 */
+    border-radius: 8px; /* 圖片邊角的圓角，與框框保持一致 */
+    margin-bottom: 10px; /* 設置圖片底部間距 */
+}
+
+.food-box p {
+    font-size: 1em; /* 設置介紹文字大小 */
+    color: #666; /* 設置介紹文字顏色 */
+    line-height: 1.5; /* 設置行高 */
+}
+
+/*footer css */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+}

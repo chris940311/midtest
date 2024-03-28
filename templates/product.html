@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>期中作業</title>
+        <link rel="stylesheet" href="{% static 'css/product.css' %}">
+        <script src="{% static 'js/script.js' %}"></script>
+    </head>
+    <body>
+        <!--頂部內容，包含首頁以及相關資訊-->
+        <header>
+            <div class="menu">
+                <a href="{% url 'home' %}">首頁</a>
+                <a href="{% url 'product' %}">產品介紹</a>
+                <a href="#about">關於我們</a>
+            </div>
+        </header>
+        <main>
+            <div class = "introduce">
+                <h2>虎尾必吃美食</h2>
+                <blockquote>
+                    <p>
+                        
+                    </p>
+                </blockquote>
+            </div>
+            {% for item in url %}
+            <div class="food-box">
+                <h2>{{ item.name }}</h2>
+                <address><a href="{{ item.url }}" target="_blank">{{ item.address }}</a></address>
+                {% if item.TEL %}
+                    <p>電話：{{ item.TEL }}</p>
+                {% endif %}
+                <img src="{{ item.menu }}" alt="菜單">
+                <img src="{{ item.img }}" alt="美食圖片">
+            </div>
+            {% endfor %}
+            
+        </main>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2024 期中作業 聯絡郵箱: 41243144@nfu.edu.tw</p>
+            </div>
+        </footer>
+    </body>
+</html>
